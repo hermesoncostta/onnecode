@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onne Code</title>
+
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/23eab126d7.js" crossorigin="anonymous"></script>
+
+    <style>
+        #hero {
+            background-image: url('assets/images/herosection3.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #features .flex-wrap {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            /* Para suportar scroll suave em dispositivos iOS */
+        }
+
+        #features .flex-wrap::-webkit-scrollbar {
+            display: none;
+            /* Oculta as barras de scroll no WebKit (Safari, Chrome, etc.) */
+        }
+    </style>
+</head>
+
+<body class="bg-background">
+
+    <!-- Header -->
+    <header class="shadow">
+        <div class="container mx-auto px-8 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-gray-800">
+                <a href="index.html">
+                    <img src="assets/images/logobranca.svg" height="100" width="180">
+                </a>
+            </div>
+            <div class="block lg:hidden">
+                <button id="menu-btn" class="text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav id="menu" class="hidden lg:flex lg:items-center lg:space-x-8 pr-5">
+                <a href="#hero" class="block text-gray-300 hover:border-b-2 border-spacing-3 border-primary">Home</a>
+                <a href="#features"
+                    class="block text-gray-300 hover:border-b-2 border-spacing-3 border-primary">Serviços</a>
+                <a href="#contact"
+                    class="block text-gray-300 hover:border-b-2 border-spacing-3 border-primary">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section text-white rounded" style="height: 100vh;">
+        <div class="container mx-auto px-6 py-36 text-center">
+            <h1 class="text-6xl font-bold">
+                Criamos Sites que <strong class="text-primary">Impulsionam</strong> <br />Seu Negócio
+            </h1>
+            <p class="mt-4 text-lg text-gray-400">Soluções personalizadas para todas as suas necessidades digitais.</p>
+            <a href="https://wa.me/5511999999999" target="_blank"
+                class="mt-8 bg-primary text-secondary font-bold py-4 px-6 rounded inline-block">
+                <i style="font-size: 1.5em;" class="fa-brands fa-whatsapp"></i> Chame no WhatsApp
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Features Section -->
+    <section id="features" class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-primary text-center">Tecnologias que utilizamos</h2>
+        <div class="mt-8 flex flex-wrap -mx-4 justify-center">
+            <div class="flex flex-wrap ">
+                <div class="w-full h-96 flex gap-x-16 px-4 py-4 p-36">
+                    <div style="height: 100px;width: 170px;"
+                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
+                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-html5"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">HTML5</h3>
+                    </div>
+                    <div style="height: 100px;width: 170px;"
+                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
+                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"
+                            class="fa-brands fa-css3-alt"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">CSS3</h3>
+                    </div>
+                    <div style="height: 100px;width: 170px;"
+                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
+                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-react"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">REACT.JS</h3>
+                    </div>
+                    <div style="height: 100px;width: 170px;"
+                        class=" bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
+                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-java"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">JAVA</h3>
+                    </div>
+                    <div style="height: 100px;width: 170px;"
+                        class=" bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
+                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-js"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">JAVASCRIPT</h3>
+                    </div>
+                    <div style="height: 100px;width: 170px;"
+                        class=" bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
+                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"
+                            class="fa-brands fa-wordpress"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">WORDPRESS</h3>
+                    </div>
+                    <div style="height: 100px;width: 150px;"
+                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
+                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-figma"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">FIGMA</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white">
+        <div class="container mx-auto px-6 py-16">
+            <h2 class="text-3xl font-bold text-gray-800 text-center">Entre em Contato</h2>
+            <form action="#" method="POST" class="mt-8 max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-600">Nome</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-600">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-600">Mensagem</label>
+                    <textarea id="message" name="message"
+                        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        rows="4" required></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary-dark text-white py-2 px-4 rounded hover:bg-primary-light">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="flex items-center w-full">
+        <div class="flex items-center w-full ml-4">
+            <div class="ml-4">
+                <img src="assets/images/logobranca.svg" height="100" width="180" />
+            </div>
+            <div class="flex justify-center items-center gap-5 ml-auto">
+                <a href="" style="font-size: 1.5em; color: #01FE87;">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="" style="font-size: 1em; color: #01FE87;">
+                    <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+                <a href="" style="font-size: 1em; color: #01FE87;">
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background text-gray-500 py-10 flex justify-center items-center" style="min-height: 12rem;">
+        <div class="container mx-auto text-center">
+            <p style="font-size: 1rem;">&copy; 2024 ONNE CODE. Todos os direitos reservados.</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem;">Av São Luís Rei de França - Turu - São Luís-MA</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('active');
+        });
+
+        // Função para fazer o scroll automático
+        function autoScroll() {
+            const container = document.querySelector('#features .flex-wrap');
+            const scrollStep = 2; // Velocidade do scroll (altere conforme necessário)
+            let scrollAmount = 0;
+
+            // Função de animação de scroll
+            const slide = () => {
+                container.scrollLeft += scrollStep;
+                scrollAmount += scrollStep;
+
+                // Verifica se chegou ao final do container e reinicia
+                if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+                    scrollAmount = 0;
+                }
+            };
+
+            // Intervalo para chamar a função de animação
+            let slideInterval = setInterval(slide, 50); // Altere o valor para ajustar a velocidade
+
+            // Parar a animação quando o mouse estiver sobre o container
+            container.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            // Reiniciar a animação quando o mouse sair do container
+            container.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(slide, 50); // Ajuste o intervalo novamente
+            });
+        }
+
+        // Chama a função de scroll automático quando a página carregar
+        window.addEventListener('load', autoScroll);
+
+    </script>
+</body>
+
+</html>
