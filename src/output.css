@@ -588,6 +588,10 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1157,6 +1161,11 @@ video {
 .hover\:text-secondary:hover {
   --tw-text-opacity: 1;
   color: rgb(37 40 59 / var(--tw-text-opacity));
+}
+
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(1 254 135 / var(--tw-text-opacity));
 }
 
 .hover\:outline:hover {

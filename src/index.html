@@ -48,6 +48,32 @@
             border: 2px solid #f97316;
             color: #f97316;
         }
+        .icon {
+            position: fixed;
+            bottom: 60px;
+            right: 30px;
+            font-size: 30px;
+            background-color: #01e675;
+            color: #fff;
+            border-radius: 50%;
+            padding: 3px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .icon .fab{
+            padding-top: 9px;
+        }
+
+        .icon:hover{
+            background-color: #fff;
+            color: #029e3b;
+            font-weight: 900;
+        }
+
 
         @media (max-width: 768px) {
             .gradient::before {
@@ -84,8 +110,13 @@
             .servicos-section {
                 padding-top: 30px;
             }
+            .icon{
+                bottom: 15px;
+            }
 
         }
+
+       
     </style>
 </head>
 
@@ -117,6 +148,7 @@
             </nav>
         </div>
     </header>
+
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section text-white rounded relative" style="height: 80vh;">
@@ -319,7 +351,9 @@
             </div>
         </form>
     </section>
-
+<div class="buttonzap">
+    <a class="icon" href="https://wa.me/559886118891"><i class="fab fa-whatsapp"></i></a>
+</div>
     <!-- FAQ Section -->
     <section id="faq" class="bg-background py-12">
         <div class="container mx-auto px-6">
@@ -427,20 +461,17 @@
                     <img src="assets/images/logobranca.svg" height="100" width="180">
                 </div>
                 <div class="flex mt-4">
-                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
-                        <i class="fab fa-facebook-f"></i>
+                    <a href="https://wa.me/559886118891" class="mx-2 text-gray-300 hover:text-primary">
+                        <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
+                    <a href="https://instagram.com/onnecode" class="mx-2 text-gray-300 hover:text-primary">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
+                    <a href="https://www.linkedin.com/company/onnecode" class="mx-2 text-gray-300 hover:text-primary">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-                <div class="text-center mt-4">
+                <div class="text-center mt-4 text-xs">
                     <p>&copy; 2023 Onne Code. Todos os direitos reservados.</p>
                 </div>
             </div>
