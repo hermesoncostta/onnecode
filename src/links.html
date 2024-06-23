@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>Links</title>
+    <style>
+        .bg-link1 {
+            background-image: url('assets/images/code.png');
+            background-color: rgba(52, 53, 58, 0.5);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+
+        .bg-link2 {
+            background-image: url('assets/images/whatsapp.png');
+            background-color: rgba(77, 225, 95, 0.5);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+
+        .bg-link3 {
+            background-image: url('assets/images/linkedin.png');
+            background-color: rgba(1, 89, 189, 0.5);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+
+        .btn-custom {
+            width: 100%;
+            max-width: 80%;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 flex flex-col items-center justify-center min-h-screen p-4">
+    <div class="container flex flex-col items-center">
+        <div class="relative mb-12">
+            <img class="w-32 h-32 rounded-full" src="assets/images/onne2.png" alt="Logo">
+        </div>
+
+        <div class="mb-8 text-gray-400 font-medium">
+            <h3>Links importantes</h3>
+        </div>
+        <div class="w-full flex flex-col items-center">
+            <a href="index.html" class="w-full mb-8 flex justify-center">
+                <div class="btn-custom bg-link1">
+                    Site
+                </div>
+            </a>
+            <a href="https://wa.me/559886118891" class="w-full mb-8 flex justify-center">
+                <div class="btn-custom bg-link2">
+                    Whatsapp
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/company/onnecode" class="w-full mb-8 flex justify-center">
+                <div class="btn-custom bg-link3">
+                    Linkedin
+                </div>
+            </a>
+        </div>
+        <div class="mt-8 text-gray-500">
+            <span class="text-xs">&copy; Todos os direitos reservados - Onne Code</span>
+        </div>
+    </div>
+</body>
+
+</html>

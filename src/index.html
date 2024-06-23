@@ -8,26 +8,83 @@
 
     <link href="./output.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/23eab126d7.js" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.4/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <style>
-        #hero {
-            background-image: url('assets/images/herosection3.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
         #features .flex-wrap {
             overflow-x: auto;
             scroll-behavior: smooth;
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
-            /* Para suportar scroll suave em dispositivos iOS */
         }
 
         #features .flex-wrap::-webkit-scrollbar {
             display: none;
-            /* Oculta as barras de scroll no WebKit (Safari, Chrome, etc.) */
+        }
+
+        .hero-section {
+            position: relative;
+        }
+
+        .gradient::before {
+            width: 500px;
+            height: 300px;
+            content: '';
+            background-image: linear-gradient(45deg, #dc422a, blue);
+            position: absolute;
+            z-index: 1;
+            border-radius: 20% 30% 80% 10%;
+            filter: blur(150px);
+            top: 80%;
+            left: 60%;
+            transform: translate(-10%, -50%);
+        }
+
+        .hover-border {
+            transition: border 0.3s, color 0.3s;
+        }
+
+        .hover-border:hover {
+            border: 2px solid #f97316;
+            color: #f97316;
+        }
+
+        @media (max-width: 768px) {
+            .gradient::before {
+                width: 200px;
+                height: 100px;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: blur(80px);
+            }
+
+            .hero-section .container {
+                padding-bottom: 5%;
+                height: 80vh;
+            }
+
+            .hero-section .button-hero {
+                margin-top: 100px;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .hero-section a {
+                font-size: 0.875rem;
+                padding: 1rem 2rem;
+            }
+
+            .servicos-section {
+                padding-top: 30px;
+            }
+
         }
     </style>
 </head>
@@ -62,170 +119,341 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section text-white rounded" style="height: 100vh;">
-        <div class="container mx-auto px-6 py-36 text-center">
+    <section id="hero" class="hero-section text-white rounded relative" style="height: 80vh;">
+        <span class="gradient"></span>
+        <div class="container mx-auto px-6 py-36 text-center z-10 relative">
             <h1 class="text-6xl font-bold">
                 Criamos Sites que <strong class="text-primary">Impulsionam</strong> <br />Seu Negócio
             </h1>
             <p class="mt-4 text-lg text-gray-400">Soluções personalizadas para todas as suas necessidades digitais.</p>
-            <a href="https://wa.me/5511999999999" target="_blank"
-                class="mt-8 bg-primary text-secondary font-bold py-4 px-6 rounded inline-block">
-                <i style="font-size: 1.5em;" class="fa-brands fa-whatsapp"></i> Chame no WhatsApp
-            </a>
+            <div class="flex items-center justify-center">
+                <a href="https://wa.me/559886118891" target="_blank"
+                    class="button-hero mt-8 bg-primary text-secondary max-w-max gap-7 z-10 flex-row font-bold py-4 px-10 rounded-full justify-center items-center inline-flex">
+                    <i style="font-size: 2em;" class="fa-brands fa-whatsapp"></i>
+                    <p>Solicitar Orçamento Grátis</p>
+                </a>
+            </div>
         </div>
     </section>
 
-
+    <!-- Services Section -->
+    <section class="container text-gray-400 bg-gray-900 body-font">
+        <div class="servicos-section container px-5 py-24 mx-auto">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-300 mb-20">Nossos serviços</h1>
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                <div class="p-4 md:w-1/3 flex">
+                    <div
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow pl-6">
+                        <h2 class="text-white text-lg title-font font-medium mb-2">Criação de Sites</h2>
+                        <p class="leading-relaxed text-base">Transforme suas ideias em realidade com nossos serviços de
+                            desenvolvimento de sites personalizados. Cada projeto é único e adaptado às suas
+                            necessidades específicas, garantindo uma presença online exclusiva.</p>
+                        <a
+                            class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
+                            Saiba Mais
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex">
+                    <div
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M3 3h2l2.15 11.096A2 2 0 0 0 9.135 16h5.73a2 2 0 0 0 1.985-1.904L19 5H5M19 5a1 1 0 1 0-2 0">
+                            </path>
+                            <circle cx="10.5" cy="18.5" r="1.5"></circle>
+                            <circle cx="16.5" cy="18.5" r="1.5"></circle>
+                        </svg>
+                    </div>
+                    <div class="flex-grow pl-6">
+                        <h2 class="text-white text-lg title-font font-medium mb-2">E-commerce</h2>
+                        <p class="leading-relaxed text-base">Oferecemos soluções completas de e-commerce, desde a
+                            configuração da loja até a integração de métodos de pagamento seguros. Transforme seu site
+                            em uma poderosa plataforma de vendas online.</p>
+                        <a
+                            class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
+                            Saiba Mais
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex">
+                    <div
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <path d="M12 15V3"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow pl-6">
+                        <h2 class="text-white text-lg title-font font-medium mb-2">Otimização de Sites (SEO)</h2>
+                        <p class="leading-relaxed text-base">Melhore a visibilidade do seu site nos motores de busca com
+                            nossos serviços de SEO. Aplicamos técnicas avançadas para aumentar o tráfego orgânico e
+                            alcançar seu público-alvo de forma eficiente.</p>
+                        <a
+                            class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
+                            Saiba Mais
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
-    <section id="features" class="container mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold text-primary text-center">Tecnologias que utilizamos</h2>
+    <section id="features" class="container mx-auto px-6 py-16 bg-background">
+        <h2 class="text-3xl font-medium text-gray-300 text-center">Tecnologias que utilizamos</h2>
         <div class="mt-8 flex flex-wrap -mx-4 justify-center">
-            <div class="flex flex-wrap ">
-                <div class="w-full h-96 flex gap-x-16 px-4 py-4 p-36">
-                    <div style="height: 100px;width: 170px;"
-                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
-                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-html5"></i>
+            <!-- Primeira linha de cards -->
+            <div class="w-full flex flex-wrap justify-center">
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-html5" style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
                         <h3 class="text-2xl font-bold text-gray-600">HTML5</h3>
                     </div>
-                    <div style="height: 100px;width: 170px;"
-                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
-                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"
-                            class="fa-brands fa-css3-alt"></i>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-css3-alt"
+                            style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
                         <h3 class="text-2xl font-bold text-gray-600">CSS3</h3>
                     </div>
-                    <div style="height: 100px;width: 170px;"
-                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
-                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-react"></i>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-react" style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
                         <h3 class="text-2xl font-bold text-gray-600">REACT.JS</h3>
                     </div>
-                    <div style="height: 100px;width: 170px;"
-                        class=" bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
-                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-java"></i>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-java" style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
                         <h3 class="text-2xl font-bold text-gray-600">JAVA</h3>
                     </div>
-                    <div style="height: 100px;width: 170px;"
-                        class=" bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
-                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-js"></i>
+                </div>
+            </div>
+            <!-- Segunda linha de cards -->
+            <div class="w-full flex flex-wrap justify-center mt-8">
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-js" style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
                         <h3 class="text-2xl font-bold text-gray-600">JAVASCRIPT</h3>
                     </div>
-                    <div style="height: 100px;width: 170px;"
-                        class=" bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
-                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"
-                            class="fa-brands fa-wordpress"></i>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-wordpress"
+                            style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
                         <h3 class="text-2xl font-bold text-gray-600">WORDPRESS</h3>
                     </div>
-                    <div style="height: 100px;width: 150px;"
-                        class="bg-backgroundLight flex flex-col rounded shadow p-10 justify-center items-center">
-                        <i style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;" class="fa-brands fa-figma"></i>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-figma" style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
                         <h3 class="text-2xl font-bold text-gray-600">FIGMA</h3>
                     </div>
                 </div>
-
+                <div class="w-full sm:w-1/2 md:w-1/4 p-4 flex justify-center">
+                    <div class="bg-backgroundLight flex flex-col shadow p-10 justify-center items-center rounded-xl hover:border border-primary cursor-pointer"
+                        style="height: 170px; width: 170px;">
+                        <i class="fa-brands fa-php" style="font-size: 3em; color: #C1C1C1; margin-bottom: 10px;"></i>
+                        <h3 class="text-2xl font-bold text-gray-600">PHP</h3>
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-white">
-        <div class="container mx-auto px-6 py-16">
-            <h2 class="text-3xl font-bold text-gray-800 text-center">Entre em Contato</h2>
-            <form action="#" method="POST" class="mt-8 max-w-lg mx-auto">
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-600">Nome</label>
-                    <input type="text" id="name" name="name"
-                        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required>
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-600">Email</label>
-                    <input type="email" id="email" name="email"
-                        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required>
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-gray-600">Mensagem</label>
-                    <textarea id="message" name="message"
-                        class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        rows="4" required></textarea>
-                </div>
+    <section id="contact" class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-medium text-gray-300 text-center">Entre em Contato</h2>
+        <p class="text-center text-gray-400 mt-4">Estamos prontos para transformar suas ideias em realidade. Preencha o
+            formulário abaixo e entraremos em contato em breve.</p>
+        <form action="#" class="mt-8 max-w-lg mx-auto">
+            <div class="flex flex-col mb-4">
+                <label for="name" class="text-gray-300">Nome</label>
+                <input type="text" id="name" name="name"
+                    class="mt-2 p-3 rounded bg-gray-800 border border-gray-700 focus:border-primary focus:ring-primary">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label for="email" class="text-gray-300">Email</label>
+                <input type="email" id="email" name="email"
+                    class="mt-2 p-3 rounded bg-gray-800 border border-gray-700 focus:border-primary focus:ring-primary">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label for="message" class="text-gray-300">Mensagem</label>
+                <textarea id="message" name="message" rows="4"
+                    class="mt-2 p-3 rounded bg-gray-800 border border-gray-700 focus:border-primary focus:ring-primary"></textarea>
+            </div>
+            <div class="text-center">
                 <button type="submit"
-                    class="w-full bg-primary-dark text-white py-2 px-4 rounded hover:bg-primary-light">Enviar</button>
-            </form>
-        </div>
+                    class="bg-primary text-secondary font-bold py-3 px-6 rounded-full hover:bg-primaryLight">Enviar
+                    Mensagem</button>
+            </div>
+        </form>
     </section>
 
-    <!-- Social Media Section -->
-    <section class="flex items-center w-full">
-        <div class="flex items-center w-full ml-4">
-            <div class="ml-4">
-                <img src="assets/images/logobranca.svg" height="100" width="180" />
-            </div>
-            <div class="flex justify-center items-center gap-5 ml-auto">
-                <a href="" style="font-size: 1.5em; color: #01FE87;">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="" style="font-size: 1em; color: #01FE87;">
-                    <i class="fa-brands fa-linkedin fa-xl"></i>
-                </a>
-                <a href="" style="font-size: 1em; color: #01FE87;">
-                    <i class="fa-brands fa-youtube fa-xl"></i>
-                </a>
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-background py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-300 mb-12">Perguntas Frequentes <strong
+                    class="text-primary"> - FAQ</strong></h2>
+            <div class="space-y-6">
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        1. Como funciona o processo de desenvolvimento de um site com vocês?
+                        <span x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">Nosso processo começa com uma consulta inicial para
+                        entender suas necessidades. Em seguida, criamos um plano de desenvolvimento personalizado,
+                        trabalhamos no design e funcionalidades, e finalmente, realizamos testes e lançamento do site.
+                        Oferecemos suporte contínuo e manutenção conforme necessário.</p>
+                </div>
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        2. Meu site será otimizado para dispositivos móveis?
+                        <span x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, todos os sites que desenvolvemos são completamente
+                        responsivos, o que significa que eles são otimizados para serem visualizados e utilizados em
+                        dispositivos móveis, como smartphones e tablets, além de desktops.</p>
+                </div>
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        3. Vocês oferecem serviços de SEO (Otimização para Motores de Busca)? <span
+                            x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, implementamos técnicas avançadas de SEO para ajudar
+                        seu site a ter uma melhor visibilidade nos resultados de pesquisa do Google e outros buscadores.
+                        Isso inclui otimização de conteúdo, estrutura do site, meta tags, entre outras práticas
+                        recomendadas.</p>
+                </div>
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        4. Vocês oferecem serviços de SEO (Otimização para Motores de Busca)? <span
+                            x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, implementamos técnicas avançadas de SEO para ajudar
+                        seu site a ter uma melhor visibilidade nos resultados de pesquisa do Google e outros buscadores.
+                        Isso inclui otimização de conteúdo, estrutura do site, meta tags, entre outras práticas
+                        recomendadas.</p>
+                </div>
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        5. Quanto tempo leva para desenvolver um site? <span x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">O tempo de desenvolvimento pode variar dependendo da
+                        complexidade do projeto. Projetos simples podem ser concluídos em algumas semanas, enquanto
+                        sites mais complexos podem levar alguns meses. Nós trabalhamos de forma ágil, mantendo você
+                        informado durante todo o processo.</p>
+                </div>
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        6. Vocês oferecem suporte após o lançamento do site? <span x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, oferecemos suporte técnico contínuo e manutenção
+                        conforme necessário após o lançamento do site. Estamos disponíveis para atualizações, correções
+                        de bugs e qualquer outro suporte técnico que você possa precisar para manter seu site
+                        funcionando sem problemas.</p>
+                </div>
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        7. Como posso acompanhar o desempenho do meu site? <span x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">Oferecemos relatórios e análises detalhadas sobre o
+                        desempenho do seu site, incluindo tráfego de visitantes, comportamento do usuário, conversões e
+                        mais. Esses insights ajudam você a tomar decisões informadas para melhorar continuamente seu
+                        site.</p>
+                </div>
+                <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
+                    <h3 @click="open = !open"
+                        class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
+                        8. Vocês oferecem hospedagem e registro de domínio? <span x-show="!open">+</span>
+                        <span x-show="open">-</span>
+                    </h3>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, oferecemos serviços completos de hospedagem web e
+                        registro de domínio para simplificar ainda mais o processo para você. Nossos servidores são
+                        confiáveis e rápidos, garantindo que seu site esteja sempre acessível.</p>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
-    <footer class="bg-background text-gray-500 py-10 flex justify-center items-center" style="min-height: 12rem;">
-        <div class="container mx-auto text-center">
-            <p style="font-size: 1rem;">&copy; 2024 ONNE CODE. Todos os direitos reservados.</p>
-            <p style="font-size: 0.8rem; margin-top: 1rem;">Av São Luís Rei de França - Turu - São Luís-MA</p>
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col items-center">
+                <div class="text-3xl font-bold text-gray-100">
+                    <img src="assets/images/logobranca.svg" height="100" width="180">
+                </div>
+                <div class="flex mt-4">
+                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="mx-2 text-gray-300 hover:text-gray-100">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <p>&copy; 2023 Onne Code. Todos os direitos reservados.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
-        document.getElementById('menu-btn').addEventListener('click', function () {
-            var menu = document.getElementById('menu');
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
-            menu.classList.toggle('active');
         });
-
-        // Função para fazer o scroll automático
-        function autoScroll() {
-            const container = document.querySelector('#features .flex-wrap');
-            const scrollStep = 2; // Velocidade do scroll (altere conforme necessário)
-            let scrollAmount = 0;
-
-            // Função de animação de scroll
-            const slide = () => {
-                container.scrollLeft += scrollStep;
-                scrollAmount += scrollStep;
-
-                // Verifica se chegou ao final do container e reinicia
-                if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-                    scrollAmount = 0;
-                }
-            };
-
-            // Intervalo para chamar a função de animação
-            let slideInterval = setInterval(slide, 50); // Altere o valor para ajustar a velocidade
-
-            // Parar a animação quando o mouse estiver sobre o container
-            container.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-
-            // Reiniciar a animação quando o mouse sair do container
-            container.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(slide, 50); // Ajuste o intervalo novamente
-            });
-        }
-
-        // Chama a função de scroll automático quando a página carregar
-        window.addEventListener('load', autoScroll);
-
     </script>
 </body>
 
