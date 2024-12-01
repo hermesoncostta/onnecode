@@ -33,20 +33,9 @@
 
         .hero-section {
             position: relative;
-        }
-
-        .gradient::before {
-            width: 500px;
-            height: 300px;
-            content: '';
-            background-image: linear-gradient(45deg, #dc422a, blue);
-            position: absolute;
-            z-index: 1;
-            border-radius: 20% 30% 80% 10%;
-            filter: blur(150px);
-            top: 80%;
-            left: 60%;
-            transform: translate(-10%, -50%);
+            max-width: 80%;
+            justify-self: center;
+            height: 100%;
         }
 
         .hover-border {
@@ -84,7 +73,6 @@
             font-weight: 900;
         }
 
-
         @media (max-width: 768px) {
             .gradient::before {
                 width: 300px;
@@ -97,15 +85,17 @@
 
             .hero-section .container {
                 padding-bottom: 5%;
-                height: 80vh;
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
             }
 
             .hero-section .button-hero {
-                margin-top: 100px;
+                margin-top: 10px;
             }
 
             .hero-section h1 {
-                font-size: 2rem;
+                font-size: 24px;
             }
 
             .hero-section p {
@@ -126,6 +116,24 @@
                 bottom: 15px;
             }
 
+            .hero-section .text-content {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .hero-section .w-full {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .hero-section .w-full img {
+                max-width: 100%;
+                display: flex;
+                align-items: center;
+                bottom: 0;
+                height: 100%;
+            }
         }
     </style>
 </head>
@@ -133,50 +141,40 @@
 <body class="bg-background">
 
     <!-- Header -->
-    <header class="shadow">
-        <div class="container mx-auto px-8 py-4 flex items-center justify-between">
-            <div class="text-2xl font-bold text-gray-800">
-                <a href="index.html">
-                    <img src="src/assets/images/logobranca.svg" height="100" width="180">
-                </a>
-            </div>
-            <div class="block lg:hidden">
-                <button id="menu-btn" class="text-gray-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav id="menu" class="hidden lg:flex lg:items-center lg:space-x-8 pr-5">
-                <a href="#hero" class="block text-gray-300 hover:border-b-2 border-spacing-3 border-primary">Home</a>
-                <a href="#features"
-                    class="block text-gray-300 hover:border-b-2 border-spacing-3 border-primary">Serviços</a>
-                <a href="#contact"
-                    class="block text-gray-300 hover:border-b-2 border-spacing-3 border-primary">Contato</a>
-            </nav>
+    <header class="flex w-full shadow justify-center mt-10 mx-auto">
+        <div class="mt-10 text-2xl font-bold text-gray-800">
+            <a href="index.html">
+                <img src="src/assets/images/logobranca.svg" height="100" width="180">
+            </a>
         </div>
     </header>
 
-
     <!-- Hero Section -->
-    <section id="hero" class="hero-section text-white rounded relative" style="height: 80vh;">
-        <span class="gradient"></span>
-        <div class="container mx-auto px-6 py-36 text-center z-10 relative">
-            <h1 class="text-6xl font-bold">
-                Criamos Sites que <strong class="text-primary">Impulsionam</strong> <br />Seu Negócio
-            </h1>
-            <p class="mt-4 text-lg text-gray-400">Soluções personalizadas para todas as suas necessidades digitais.</p>
-            <div class="flex items-center justify-center">
+    <section id="hero" class="flex hero-section text-white rounded relative h-full">
+        <div class="container mx-auto flex flex-col-reverse lg:flex-col items-center justify-center py-12 px-6 z-50">
+            <!-- Conteúdo do Texto -->
+            <div class="w-1/2 text-content lg:text-left lg:w-1/2 space-y-6">
+                <h1 class="text-6xl font-bold">
+                    Criamos Sites que <strong class="text-primary">Impulsionam</strong> <br />Seu Negócio
+                </h1>
+                <p class="mt-4 text-lg text-gray-400">
+                    Soluções personalizadas para todas as suas necessidades digitais.
+                </p>
                 <a href="https://wa.me/559886118891" target="_blank"
-                    class="button-hero mt-8 bg-primary text-secondary max-w-max gap-7 z-10 flex-row font-bold py-4 px-10 rounded-full justify-center items-center inline-flex">
+                    class="button-hero mt-8 bg-primary text-secondary max-w-max gap-7 flex items-center font-bold py-4 px-10 rounded-full">
                     <i style="font-size: 2em;" class="fa-brands fa-whatsapp"></i>
                     <p>Solicitar Orçamento Grátis</p>
                 </a>
             </div>
+            <!-- Imagem -->
+            <div class="w-full flex justify-center">
+                <img src="./src/assets/images/herobanner.png" alt="Hero Banner"
+                    class="rounded-lg shadow-lg h-full w-36" />
+            </div>
         </div>
     </section>
+
+
 
     <!-- Services Section -->
     <section class="container text-gray-400 bg-gray-900 body-font">
@@ -339,7 +337,8 @@
         <p class="text-center text-gray-400 mt-4">Estamos prontos para transformar suas ideias em realidade. Preencha o
             formulário abaixo e entraremos em contato em breve.</p>
 
-        <form action="https://formsubmit.co/hermesoncostta9@gmail.com" method="post" class="mt-8 max-w-lg mx-auto text-gray-300">
+        <form action="https://formsubmit.co/hermesoncostta9@gmail.com" method="post"
+            class="mt-8 max-w-lg mx-auto text-gray-300">
             <div class="flex flex-col mb-4">
                 <label for="name" class="text-gray-300">Nome</label>
                 <input type="text" id="name" name="name"
@@ -484,7 +483,7 @@
                     </a>
                 </div>
                 <div class="text-center mt-4 text-xs">
-                    <p>&copy; 2023 Onne Code. Todos os direitos reservados.</p>
+                    <p>&copy; 2024 Onne Code. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
