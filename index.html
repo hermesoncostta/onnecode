@@ -141,7 +141,7 @@
 <body class="bg-background overflow-x-hidden">
 
     <!-- Header -->
-    <header class="flex w-full shadow justify-center mt-10 mx-auto">
+    <header class="flex w-full shadow justify-center mt-7 mx-auto">
         <div class="mt-10 text-2xl font-bold text-gray-800">
             <a href="index.html">
                 <img src="src/assets/images/logobranca.svg" height="100" width="180">
@@ -149,116 +149,116 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="flex hero-section text-white rounded relative h-full">
-        <div class="container mx-auto flex flex-col-reverse lg:flex-col items-center justify-center py-12 px-6 z-50">
+    <section id="hero" class="flex bg-background hero-section text-white rounded relative h-full">
+        <div class="container mx-auto flex flex-col-reverse lg:flex-row justify-center py-12 px-6 z-50">
             <!-- Conteúdo do Texto -->
-            <div class="w-1/2 text-content lg:text-left lg:w-1/2 space-y-6">
-                <h1 class="text-6xl font-bold">
-                    Criamos Sites que <strong class="text-primary">Impulsionam</strong> <br />Seu Negócio
+            <div class="text-content lg:text-left lg:w-1/2 mt-10">
+                <h1 class="text-6xl font-bold max-w-xl lg:max-w-2xl">
+                    Tire o seu projeto do papel com quem entende de <strong class="text-primary">aplicativos.</strong>
                 </h1>
                 <p class="mt-4 text-lg text-gray-400">
-                    Soluções personalizadas para todas as suas necessidades digitais.
+                    Especialistas em Criação de Aplicativos Sob Medida.
                 </p>
                 <a href="https://wa.me/559886118891" target="_blank"
                     class="button-hero mt-8 bg-primary text-secondary max-w-max gap-7 flex items-center font-bold py-4 px-10 rounded-full">
                     <i style="font-size: 2em;" class="fa-brands fa-whatsapp"></i>
-                    <p>Solicitar Orçamento Grátis</p>
+                    <p>Entrar em contato com especialista</p>
                 </a>
             </div>
-            <!-- Imagem -->
-            <div class="w-full flex justify-center">
-                <img src="./src/assets/images/herobanner.png" alt="Hero Banner"
-                    class="rounded-lg shadow-lg h-full w-36" />
+            <!-- Imagem para Desktop -->
+            <div  class="w-1/2 hidden lg:flex justify-end mt-8">
+                <img src="./src/assets/images/grupo.png" alt="Hero Banner"
+                    class="rounded-lg shadow-lg h-auto w-72 lg:w-[60%] lg:h-auto" />
             </div>
         </div>
     </section>
+    
+
+<!-- Imagem para Mobile -->
+<div class="w-full flex justify-end ml-auto lg:hidden">
+    <img src="./src/assets/images/grupo.png" alt="Hero Banner"
+        class="rounded-lg shadow-lg h-full w-36" />
+</div>
+
+
+    
 
 
 
     <!-- Services Section -->
-    <section class="container text-gray-400 bg-gray-900 body-font">
+    <section class="container text-gray-400 bg-white body-font">
         <div class="servicos-section container px-5 py-24 mx-auto">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-300 mb-20">Nossos serviços</h1>
-            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                <div class="p-4 md:w-1/3 flex">
-                    <div
-                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                    </div>
-                    <div class="flex-grow pl-6">
-                        <h2 class="text-white text-lg title-font font-medium mb-2">Criação de Sites</h2>
-                        <p class="leading-relaxed text-base">Transforme suas ideias em realidade com nossos serviços de
-                            desenvolvimento de sites personalizados. Cada projeto é único e adaptado às suas
-                            necessidades específicas, garantindo uma presença online exclusiva.</p>
-                        <a
-                            class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
-                            Saiba Mais
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-4 md:w-1/3 flex">
-                    <div
-                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M3 3h2l2.15 11.096A2 2 0 0 0 9.135 16h5.73a2 2 0 0 0 1.985-1.904L19 5H5M19 5a1 1 0 1 0-2 0">
-                            </path>
-                            <circle cx="10.5" cy="18.5" r="1.5"></circle>
-                            <circle cx="16.5" cy="18.5" r="1.5"></circle>
-                        </svg>
-                    </div>
-                    <div class="flex-grow pl-6">
-                        <h2 class="text-white text-lg title-font font-medium mb-2">E-commerce</h2>
-                        <p class="leading-relaxed text-base">Oferecemos soluções completas de e-commerce, desde a
-                            configuração da loja até a integração de métodos de pagamento seguros. Transforme seu site
-                            em uma poderosa plataforma de vendas online.</p>
-                        <a
-                            class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
-                            Saiba Mais
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-4 md:w-1/3 flex">
-                    <div
-                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <path d="M12 15V3"></path>
-                        </svg>
-                    </div>
-                    <div class="flex-grow pl-6">
-                        <h2 class="text-white text-lg title-font font-medium mb-2">Otimização de Sites (SEO)</h2>
-                        <p class="leading-relaxed text-base">Melhore a visibilidade do seu site nos motores de busca com
-                            nossos serviços de SEO. Aplicamos técnicas avançadas para aumentar o tráfego orgânico e
-                            alcançar seu público-alvo de forma eficiente.</p>
-                        <a
-                            class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
-                            Saiba Mais
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+          <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-300 mb-20">Por que Escolher Nossa Software House?</h1>
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+            <!-- Experiência Comprovada -->
+            <div class="p-4 md:w-1/3 flex">
+                <div
+                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
             </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-white text-lg title-font font-medium mb-2">Experiência Comprovada</h2>
+                <p class="leading-relaxed text-base">Com mais de 3 anos de atuação no mercado, nossa equipe tem um portfólio repleto de projetos bem-sucedidos em diversas indústrias, incluindo transportes, varejo, e-commerce, entre outros. Trabalhamos lado a lado com nossos clientes para entender suas necessidades específicas e entregar soluções eficazes que impulsionam o sucesso de seus negócios. Nossa experiência é o alicerce que garante a qualidade e eficiência em cada projeto.</p>
+                <a class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
+                  Saiba Mais
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+      
+            <!-- Atendimento Personalizado -->
+            <div class="p-4 md:w-1/3 flex">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M12 13c4 0 7 2 7 4v3H5v-3c0-2 3-4 7-4z"></path>
+                </svg>
+                
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-white text-lg title-font font-medium mb-2">Atendimento Personalizado</h2>
+                <p class="leading-relaxed text-base">Entendemos que cada projeto é único e exige atenção especial. Por isso, nosso atendimento é totalmente personalizado, desde a concepção até a entrega do aplicativo. Cada detalhe do seu projeto importa para nós, e trabalhamos para entender profundamente suas necessidades e objetivos, oferecendo soluções que se alinham perfeitamente com suas expectativas. Nosso compromisso é proporcionar um atendimento dedicado, com acompanhamento constante e total transparência em todas as etapas.</p>
+                <a class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
+                  Saiba Mais
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+      
+            <!-- Tecnologia de Ponta -->
+            <div class="p-4 md:w-1/3 flex">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-primary mb-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M17.5 5L15 7.5M5 17l2.5-2.5M17.5 17L15 14.5"></path>
+                </svg>
+                
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-white text-lg title-font font-medium mb-2">Tecnologia de Ponta</h2>
+                <p class="leading-relaxed text-base">Nós utilizamos as ferramentas e tecnologias mais avançadas para garantir que seu aplicativo seja moderno, rápido e seguro. Desde integração com sistemas de pagamento até a implementação de funcionalidades de inteligência artificial, nossa equipe está equipada para oferecer soluções inovadoras que atendem às demandas do mercado. Acreditamos que a tecnologia deve ser uma aliada poderosa no sucesso do seu projeto, por isso sempre buscamos as melhores práticas e as plataformas mais atuais.</p>
+                <a class="mt-3 text-primary inline-flex items-center px-5 py-2 cursor-pointer hover:bg-primary rounded-full hover:text-secondary hover:font-medium">
+                  Saiba Mais
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
+    
+    
+      
     <section class="container text-gray-400 bg-gray-900 body-font">
         <div class="servicos-section container px-5 py-24 mx-auto">
           <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-300 mb-20">O que nossos clientes dizem</h1>
@@ -310,25 +310,15 @@
       
       
     
-    <section class="py-16 bg-gray-100">
-        <div class="max-w-screen-xl mx-auto px-4">
-          <h2 class="text-3xl font-semibold text-center mb-8 text-white">Conheça nossa equipe</h2>
-          <div class="w-full flex flex-wrap justify-center mt-8">
-            <!-- Imagem 1 -->
-            <div class="flex justify-center">
-              <img src="./src/assets/images/designer.png" alt="Membro da equipe 1" class="w-72 h-64 object-cover rounded-lg shadow-lg">
-            </div>
-            <!-- Imagem 2 -->
-            <div class="flex justify-center">
-              <img src="./src/assets/images/programador.png" alt="Membro da equipe 2" class="w-72 h-64 object-cover rounded-lg shadow-lg">
-            </div>
-            <!-- Imagem 3 -->
-            <div class="flex justify-center">
-              <img src="./src/assets/images/socialmedia.png" alt="Membro da equipe 3" class="w-72 h-64 object-cover rounded-lg shadow-lg">
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="bg-primary text-white py-16 px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Pronto para Dar o Próximo Passo?</h2>
+        <p class="text-lg mb-8 text-gray-700">Transforme sua ideia em um aplicativo de sucesso com nossa expertise. Vamos trabalhar juntos para criar soluções inovadoras e de impacto.</p>
+        <a href="https://wa.me/559886118891" target="_blank"
+                    class=" mt-8 bg-primary text-secondary max-w-max gap-7 flex  font-bold py-4 px-10 rounded-full">
+                    <i style="font-size: 2em;" class="fa-brands fa-whatsapp"></i>
+                    <p>Entrar em contato com especialista</p>
+                </a>
+    </section>
       
       
     <div class="buttonzap">
@@ -343,96 +333,79 @@
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        1. Como funciona o processo de desenvolvimento de um site com vocês?
+                        1. Como funciona o processo de desenvolvimento de um aplicativo com vocês?
                         <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">Nosso processo começa com uma consulta inicial para
-                        entender suas necessidades. Em seguida, criamos um plano de desenvolvimento personalizado,
-                        trabalhamos no design e funcionalidades, e finalmente, realizamos testes e lançamento do site.
-                        Oferecemos suporte contínuo e manutenção conforme necessário.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">O processo começa com uma reunião para entender suas necessidades e objetivos. Em seguida, realizamos a análise, design e protótipos, até a parte de desenvolvimento e testes. Após o lançamento, oferecemos suporte contínuo e atualizações conforme necessário.</p>
                 </div>
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        2. Meu site será otimizado para dispositivos móveis?
+                        2. Meu aplicativo será compatível com Android e iOS?
                         <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">Sim, todos os sites que desenvolvemos são completamente
-                        responsivos, o que significa que eles são otimizados para serem visualizados e utilizados em
-                        dispositivos móveis, como smartphones e tablets, além de desktops.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, trabalhamos com desenvolvimento de aplicativos nativos para Android e iOS ou com tecnologias híbridas como React Native para garantir compatibilidade em ambos os sistemas operacionais.</p>
                 </div>
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        3. Vocês oferecem serviços de SEO (Otimização para Motores de Busca)? <span
-                            x-show="!open">+</span>
+                        3. Vocês oferecem integração com APIs externas?
+                        <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">Sim, implementamos técnicas avançadas de SEO para ajudar
-                        seu site a ter uma melhor visibilidade nos resultados de pesquisa do Google e outros buscadores.
-                        Isso inclui otimização de conteúdo, estrutura do site, meta tags, entre outras práticas
-                        recomendadas.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, realizamos integrações com APIs externas, como gateways de pagamento, redes sociais, serviços de geolocalização, entre outros, para aumentar a funcionalidade do seu aplicativo.</p>
                 </div>
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        4. Vocês oferecem serviços de SEO (Otimização para Motores de Busca)? <span
-                            x-show="!open">+</span>
+                        4. Qual é o tempo de desenvolvimento de um aplicativo?
+                        <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">Sim, implementamos técnicas avançadas de SEO para ajudar
-                        seu site a ter uma melhor visibilidade nos resultados de pesquisa do Google e outros buscadores.
-                        Isso inclui otimização de conteúdo, estrutura do site, meta tags, entre outras práticas
-                        recomendadas.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">O tempo de desenvolvimento pode variar dependendo da complexidade do projeto. Aplicativos simples podem ser entregues em algumas semanas, enquanto aplicativos mais complexos podem levar de 2 a 6 meses. Nós trabalhamos com metodologias ágeis para garantir entregas rápidas e iterativas.</p>
                 </div>
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        5. Quanto tempo leva para desenvolver um site? <span x-show="!open">+</span>
+                        5. Meu aplicativo terá suporte após o lançamento?
+                        <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">O tempo de desenvolvimento pode variar dependendo da
-                        complexidade do projeto. Projetos simples podem ser concluídos em algumas semanas, enquanto
-                        sites mais complexos podem levar alguns meses. Nós trabalhamos de forma ágil, mantendo você
-                        informado durante todo o processo.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, oferecemos planos de suporte contínuo para o seu aplicativo após o lançamento. Isso inclui atualizações regulares, correções de bugs e manutenção para garantir que tudo continue funcionando perfeitamente.</p>
                 </div>
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        6. Vocês oferecem suporte após o lançamento do site? <span x-show="!open">+</span>
+                        6. Vocês ajudam a lançar o aplicativo nas lojas de aplicativos?
+                        <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">Sim, oferecemos suporte técnico contínuo e manutenção
-                        conforme necessário após o lançamento do site. Estamos disponíveis para atualizações, correções
-                        de bugs e qualquer outro suporte técnico que você possa precisar para manter seu site
-                        funcionando sem problemas.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, nossa equipe ajuda no processo de submissão e publicação do aplicativo na Google Play Store e na Apple App Store, cuidando de toda a documentação e configuração necessárias para o lançamento.</p>
                 </div>
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        7. Como posso acompanhar o desempenho do meu site? <span x-show="!open">+</span>
+                        7. Meu aplicativo será seguro?
+                        <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">Oferecemos relatórios e análises detalhadas sobre o
-                        desempenho do seu site, incluindo tráfego de visitantes, comportamento do usuário, conversões e
-                        mais. Esses insights ajudam você a tomar decisões informadas para melhorar continuamente seu
-                        site.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, tomamos a segurança como uma prioridade. Implementamos criptografia, autenticação segura e outras práticas recomendadas para garantir que os dados do seu aplicativo e dos seus usuários estejam protegidos.</p>
                 </div>
                 <div x-data="{ open: false }" class="bg-backgroundLight rounded-lg shadow-md p-6">
                     <h3 @click="open = !open"
                         class="text-xl font-semibold text-gray-400 cursor-pointer flex justify-between items-center">
-                        8. Vocês oferecem hospedagem e registro de domínio? <span x-show="!open">+</span>
+                        8. Vocês oferecem treinamento para o uso do aplicativo?
+                        <span x-show="!open">+</span>
                         <span x-show="open">-</span>
                     </h3>
-                    <p x-show="open" class="mt-2 text-gray-500">Sim, oferecemos serviços completos de hospedagem web e
-                        registro de domínio para simplificar ainda mais o processo para você. Nossos servidores são
-                        confiáveis e rápidos, garantindo que seu site esteja sempre acessível.</p>
+                    <p x-show="open" class="mt-2 text-gray-500">Sim, oferecemos treinamento para sua equipe e usuários finais do aplicativo. Esse treinamento pode incluir tutoriais, webinars e materiais educativos para garantir que todos saibam como utilizar o aplicativo da melhor forma possível.</p>
                 </div>
             </div>
         </div>
     </section>
+    
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400">
         <div class="container mx-auto px-6 py-8">
@@ -452,7 +425,7 @@
                     </a>
                 </div>
                 <div class="text-center mt-4 text-xs">
-                    <p>&copy; 2024 Onne Code. Todos os direitos reservados.</p>
+                    <p>&copy; 2025 Onne Code. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>

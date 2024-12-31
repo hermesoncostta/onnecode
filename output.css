@@ -857,7 +857,7 @@ video {
 
 .bg-background {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 21 33 / var(--tw-bg-opacity));
+  background-color: rgb(20 22 24 / var(--tw-bg-opacity));
 }
 
 .bg-backgroundLight {
@@ -1009,7 +1009,7 @@ video {
 }
 
 .text-6xl {
-  font-size: 3.75rem;
+  font-size: 3.2rem;
   line-height: 1;
 }
 
